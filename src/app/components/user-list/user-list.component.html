@@ -1,0 +1,66 @@
+<div class="container-fluid mt-5">
+
+    <div class="head_Section">
+
+        <div>
+            <h1 style="color: green;">HODLINFO.<small>com</small></h1>
+            <p>Powered By <span style="color: green;">FirstStreet</span></p>
+        </div>
+
+        <div style="margin-right:50px; margin-left: 300px;">
+            <select style="border-radius: 10px; padding: 8px; font-weight: bold; color: white; background-color: gray;">
+                <option>INR</option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <select style="border-radius: 10px; padding: 8px; font-weight: bold; color: white; background-color: gray;">
+                <option>BTC</option>
+            </select>
+
+        </div>
+
+        <div style="margin-left: 150px; margin-right: 30px; color: green; border: 5px solid green;  width:50px; height: 55px; padding: 5px; border-radius: 50px;">
+            <h3>58</h3>
+        </div>
+
+        <div class="telegram">
+            <h3><i class='fas fa-envelope-open' style='font-size:30px;color:white'></i>&nbsp;&nbsp;Connect Telegram</h3>
+        </div>
+
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+
+    </div>
+
+</div>
+
+<div class="container-fluid mt-5">
+
+    <table class="table">
+
+        <thead>
+            <tr style="font-weight: bold; color:grey; font-size: 25px;">
+                <th>#</th>
+                <th>name</th>
+                <th>last</th>
+                <th>Buy / Sell Price</th>
+                <th>volume</th>
+                <th>base_unit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor= 'let pro of product_Content; let i=index;' style="font-weight: bold; font-size: 20px; background-color: gray; color: white;">
+                <td>{{i+1}}</td>
+                <td>{{pro.name}}</td>
+                <td><i class='fas fa-rupee-sign' style='font-size:20px;color:white;'></i>&nbsp;&nbsp;{{pro.last}}</td>
+                <td><i class='fas fa-rupee-sign' style='font-size:20px;color:white;'></i>&nbsp;&nbsp;{{pro.buy}} / &nbsp;<i class='fas fa-rupee-sign' style='font-size:20px;color:white;'></i>&nbsp;&nbsp;{{pro.sell}}</td>
+                <td>{{pro.volume}}</td>
+                <td>{{pro.base_unit}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>
